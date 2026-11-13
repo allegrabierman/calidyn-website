@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calidyn | Executive Communication Development</title>
+<meta name="description" content="Executive communication development for global-facing professionals, built around your real work.">
+<link rel="canonical" href="https://calidyn.co/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calidyn.co/">
+<meta property="og:title" content="Calidyn | Executive Communication Development">
+<meta property="og:description" content="Communication should never be the reason someone’s capability goes unseen.">
+<meta property="og:image" content="https://calidyn.co/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --ivory: #f4efe6;
+    --ivory-deep: #ebe4d8;
+    --ink: #1a1816;
+    --muted: #6b645b;
+    --line: #d8cfc0;
+    --champagne: #b3a07f;
+    --on-dark: #efe9de;
+    --on-dark-muted: #b9b0a2;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--ivory); color: var(--ink); font-family: var(--sans); font-weight: 300; font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .narrow > * { max-width: 720px; }
+  .cta .narrow > * { margin-left: auto; margin-right: auto; }
+
+  /* Header */
+  header { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; }
+  .wordmark { font-family: var(--serif); font-size: 22px; letter-spacing: 0.42em; color: var(--on-dark); text-decoration: none; font-weight: 500; }
+  nav a { color: var(--on-dark-muted); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; margin-left: 28px; transition: color .2s; }
+  nav a:hover { color: var(--on-dark); }
+
+  /* Hero */
+  .hero { background: var(--black) url("hero.jpg") right center / cover no-repeat; color: var(--on-dark); min-height: 92vh; display: flex; align-items: center; position: relative; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.6) 45%, rgba(10,10,10,0) 75%); }
+  .hero .wrap { position: relative; z-index: 1; padding-top: 120px; padding-bottom: 96px; width: 100%; }
+  .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(38px, 5.4vw, 64px); line-height: 1.12; max-width: 640px; letter-spacing: -0.005em; }
+  .rule { width: 72px; height: 1px; background: var(--champagne); margin: 32px 0 26px; }
+  .hero p.lede { color: var(--on-dark-muted); font-size: 18px; max-width: 520px; }
+  .actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; }
+  .btn { display: inline-block; padding: 16px 28px; font-size: 14px; letter-spacing: 0.06em; text-decoration: none; font-weight: 400; transition: background .2s, color .2s; }
+  .btn-light { background: var(--on-dark); color: var(--black); }
+  .btn-light:hover { background: #fff; }
+  .btn-dark { background: var(--black); color: var(--on-dark); }
+  .btn-dark:hover { background: #2a2622; }
+  .link-quiet { font-size: 14px; letter-spacing: 0.04em; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; opacity: .85; }
+  .link-quiet:hover { opacity: 1; }
+
+  /* Sections */
+  section { padding: 112px 0; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--champagne); font-weight: 500; margin-bottom: 22px; }
+  h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 4vw, 46px); line-height: 1.15; margin-bottom: 28px; }
+  p + p { margin-top: 18px; }
+  .big { font-family: var(--serif); font-size: clamp(22px, 2.4vw, 27px); line-height: 1.5; font-weight: 400; }
+
+  .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 48px; }
+  .step { background: var(--ivory); padding: 44px 40px; }
+  .step .num { font-family: var(--serif); font-style: italic; color: var(--champagne); font-size: 20px; }
+  .step h3 { font-family: var(--serif); font-weight: 500; font-size: 28px; margin: 6px 0 16px; }
+  .step p { color: var(--muted); }
+  .note { margin-top: 44px; font-family: var(--serif); font-style: italic; font-size: 24px; line-height: 1.45; }
+
+  .alt { background: var(--ivory-deep); }
+
+  .founder { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: center; }
+  .founder img { width: 100%; aspect-ratio: 1; object-fit: cover; filter: grayscale(15%); }
+  .founder .sig { margin-top: 26px; font-family: var(--serif); font-size: 20px; }
+  .founder .sig span { display: block; font-family: var(--sans); font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+
+  .pulse { background: var(--black); color: var(--on-dark); }
+  .pulse .wrap { display: flex; justify-content: space-between; align-items: center; gap: 48px; }
+  .pulse h2 { margin-bottom: 14px; }
+  .pulse p { color: var(--on-dark-muted); max-width: 560px; }
+  .pulse .btn { white-space: nowrap; }
+
+  .cta { text-align: center; }
+  .cta .narrow { margin: 0 auto; }
+  .cta p { color: var(--muted); }
+  .cta .actions { justify-content: center; }
+  .cta .email { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+  footer { border-top: 1px solid var(--line); padding: 36px 0; font-size: 13px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; }
+  footer a { text-decoration: none; margin-left: 22px; }
+  footer a:first-child { margin-left: 0; }
+  footer a:hover { color: var(--ink); }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    nav { display: none; }
+    header .wrap { padding-top: 22px; }
+    .wordmark { font-size: 18px; }
+    .hero { min-height: 88vh; background-position: 72% center; }
+    .hero::after { background: linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.85) 60%); }
+    .hero .wrap { padding-top: 110px; padding-bottom: 64px; }
+    section { padding: 76px 0; }
+    .steps { grid-template-columns: 1fr; }
+    .step { padding: 32px 26px; }
+    .founder { grid-template-columns: 1fr; gap: 32px; }
+    .founder img { max-width: 260px; }
+    .pulse .wrap { flex-direction: column; align-items: flex-start; }
+    .btn { width: 100%; text-align: center; }
+    footer a { margin-left: 0; margin-right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="wordmark" href="/" aria-label="Calidyn home">CALIDYN</a>
+    <nav>
+      <a href="#approach">Approach</a>
+      <a href="#founder">Founder</a>
+      <a href="https://thecorporatepulse.substack.com">The Corporate Pulse</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <h1>Communication should never be the reason someone’s capability goes unseen.</h1>
+      <div class="rule"></div>
+      <p class="lede">Executive communication development for global-facing professionals, built around your real work.</p>
+      <div class="actions">
+        <a class="btn btn-light" href="mailto:allegra@calidyn.co?subject=Communication%20Diagnostic%20request">Request a Communication Diagnostic</a>
+        <a class="link-quiet" href="https://thecorporatepulse.substack.com">Read The Corporate Pulse</a>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap narrow">
+      <div class="eyebrow">The gap</div>
+      <h2>You know the answer. The room doesn’t always hear it.</h2>
+      <p class="big">A senior stakeholder pushes back and the recommendation starts to soften. A strong idea gets buried under too much detail. A meeting in your second language moves faster than you’d like.</p>
+      <p>None of this says anything about how capable you are, but it shapes how capable you look. Calidyn works on that gap, for professionals who work across cultures and use English as a working language.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="approach">
+    <div class="wrap">
+      <div class="narrow">
+        <div class="eyebrow">How we work</div>
+        <h2>Start with evidence. Then work on the real thing.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">01</div>
+          <h3>The Communication Diagnostic</h3>
+          <p>Every engagement starts here. We look at how you communicate across real work situations, like presenting a recommendation, handling a challenge or writing to someone senior, and find exactly where your message stops landing. You get a clear written report on what’s working and what’s worth developing.</p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <h3>The Executive Sprint</h3>
+          <p>From there, we work on your actual emails, meetings and presentations through rewriting, rehearsal and feedback, so the improvement shows up in the work you’re already doing.</p>
+        </div>
+      </div>
+      <p class="note" style="max-width:720px">The goal is range, not a new personality. Nobody needs to sound more native to be taken seriously.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap narrow">
+      <div class="eyebrow">Who it’s for</div>
+      <h2>For people whose expertise is not in question.</h2>
+      <p>Managers, specialists and leaders in international companies whose communication doesn’t always carry what they know, especially in a second language, under pressure or in front of senior leadership.</p>
+      <p>If you’ve ever walked out of a meeting knowing you had the best answer in the room, and that it didn’t come across that way, this is for you.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="founder">
+    <div class="wrap founder">
+      <img src="allegra.jpg" alt="Allegra Bierman, founder of Calidyn" width="600" height="600" loading="lazy">
+      <div>
+        <div class="eyebrow">Founder</div>
+        <h2>Hi, I’m Allegra.</h2>
+        <p>I started Calidyn because I kept seeing the same thing: capable people being underestimated because of how their ideas landed, not because of the ideas themselves.</p>
+        <p>My background is in international sales, partnerships, events and education consulting, and I’m trained in teaching Business English. All of it came down to explaining things clearly to very different audiences, which is what I now help other people do.</p>
+        <div class="sig">Allegra Bierman<span>Founder, Calidyn</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pulse">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">The Corporate Pulse</div>
+        <h2>Notes from inside the room.</h2>
+        <p>Every Monday at 9am KST, I write about how communication, hierarchy and pressure decide which ideas get through in global companies.</p>
+      </div>
+      <a class="btn btn-light" href="https://thecorporatepulse.substack.com">Read the latest issue</a>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap narrow">
+      <div class="eyebrow">Get started</div>
+      <h2>Start with a diagnostic.</h2>
+      <p>Tell me a little about your role and where communication feels harder than it should. I’ll reply to you personally.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="mailto:allegra@calidyn.co?subject=Communication%20Diagnostic%20request">Request a Communication Diagnostic</a>
+      </div>
+      <div class="email">or email <a href="mailto:allegra@calidyn.co">allegra@calidyn.co</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Calidyn</div>
+    <div>
+      <a href="https://www.linkedin.com/company/calidyn">LinkedIn</a>
+      <a href="https://www.instagram.com/calidyn/">Instagram</a>
+      <a href="https://thecorporatepulse.substack.com">The Corporate Pulse</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
