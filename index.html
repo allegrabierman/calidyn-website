@@ -90,6 +90,13 @@
   .pulse p { color: var(--on-dark-muted); max-width: 560px; }
   .pulse .btn { white-space: nowrap; }
 
+  .next { padding-bottom: 40px; }
+  .steps-list { list-style: none; counter-reset: s; margin-top: 8px; }
+  .steps-list li { counter-increment: s; position: relative; padding: 22px 0 22px 56px; border-top: 1px solid var(--line); }
+  .steps-list li:last-child { border-bottom: 1px solid var(--line); }
+  .steps-list li::before { content: counter(s); position: absolute; left: 0; top: 16px; font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--champagne); }
+  .steps-list strong { font-weight: 500; }
+  .price { margin-top: 28px; font-family: var(--serif); font-size: 22px; }
   .cta { text-align: center; }
   .cta .narrow { margin: 0 auto; }
   .cta p { color: var(--muted); }
@@ -188,7 +195,7 @@
       <div>
         <h2>Hi, I’m Allegra.</h2>
         <p>I started Calidyn because I became really interested in the gap between being good at what you do and being able to get that across when the stakes are higher.</p>
-        <p>My background is a bit mixed: international sales, partnerships, events, education consulting and Business English training. I didn’t plan those roles around one neat theme, but I kept ending up in situations where understanding people quickly and explaining things clearly mattered.</p>
+        <p>My background covers international sales, partnerships, events, education consulting and Business English training. I didn’t plan those roles around one neat theme, but I kept ending up in situations where understanding people quickly and explaining things clearly mattered.</p>
         <div class="sig">Allegra Bierman<span>Founder, Calidyn</span></div>
       </div>
     </div>
@@ -202,6 +209,20 @@
         <p>Every Monday at 9am KST, I write about how communication, hierarchy and pressure decide which ideas get through in global companies.</p>
       </div>
       <a class="btn btn-light" href="https://thecorporatepulse.substack.com">Read the latest issue</a>
+    </div>
+  </section>
+
+  <section class="next">
+    <div class="wrap narrow">
+      <h2>What happens next</h2>
+      <ol class="steps-list">
+        <li><strong>Send a request.</strong> Tell me about your role and where communication feels harder than it should.</li>
+        <li><strong>I reply personally</strong> within two working days to check it&rsquo;s a good fit and share next steps.</li>
+        <li><strong>Your Diagnostic.</strong> Short recorded responses to real work scenarios, plus one writing sample. About 30 minutes, online, whenever suits you.</li>
+        <li><strong>Your written report</strong> within five working days: what&rsquo;s working, where your point gets lost, and what&rsquo;s worth developing.</li>
+        <li><strong>You decide</strong> whether to continue into an Executive Sprint. The report stands on its own either way.</li>
+      </ol>
+      <p class="price">The Communication Diagnostic is USD 350.</p>
     </div>
   </section>
 
