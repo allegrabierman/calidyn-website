@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request a Communication Diagnostic | Calidyn</title>
+<meta name="description" content="Executive communication development for international professionals, built around your real work.">
+<link rel="canonical" href="https://calidyn.co/request/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calidyn.co/">
+<meta property="og:title" content="Calidyn | Executive Communication Development">
+<meta property="og:description" content="Communication should never be the reason someone’s capability goes unseen.">
+<meta property="og:image" content="https://calidyn.co/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --ivory: #f4efe6;
+    --ivory-deep: #ebe4d8;
+    --ink: #1a1816;
+    --muted: #6b645b;
+    --line: #d8cfc0;
+    --champagne: #b3a07f;
+    --on-dark: #efe9de;
+    --on-dark-muted: #b9b0a2;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--ivory); color: var(--ink); font-family: var(--sans); font-weight: 300; font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .narrow > * { max-width: 720px; }
+  .cta .narrow > * { margin-left: auto; margin-right: auto; }
+
+  /* Header */
+  header { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; }
+  .wordmark { font-family: var(--serif); font-size: 22px; letter-spacing: 0.42em; color: var(--on-dark); text-decoration: none; font-weight: 500; }
+  nav a { color: var(--on-dark-muted); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; margin-left: 28px; transition: color .2s; }
+  nav a:hover { color: var(--on-dark); }
+
+  /* Hero */
+  .hero { background: var(--black) url("hero.jpg") right center / cover no-repeat; color: var(--on-dark); min-height: 92vh; display: flex; align-items: center; position: relative; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.6) 45%, rgba(10,10,10,0) 75%); }
+  .hero .wrap { position: relative; z-index: 1; padding-top: 120px; padding-bottom: 96px; width: 100%; }
+  .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(38px, 5.4vw, 64px); line-height: 1.12; max-width: 640px; letter-spacing: -0.005em; }
+  .rule { width: 72px; height: 1px; background: var(--champagne); margin: 32px 0 26px; }
+  .hero p.lede { color: var(--on-dark-muted); font-size: 18px; max-width: 520px; }
+  .actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; }
+  .btn { display: inline-block; padding: 16px 28px; font-size: 14px; letter-spacing: 0.06em; text-decoration: none; font-weight: 400; transition: background .2s, color .2s; }
+  .btn-light { background: var(--on-dark); color: var(--black); }
+  .btn-light:hover { background: #fff; }
+  .btn-dark { background: var(--black); color: var(--on-dark); }
+  .btn-dark:hover { background: #2a2622; }
+  .link-quiet { font-size: 14px; letter-spacing: 0.04em; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; opacity: .85; }
+  .link-quiet:hover { opacity: 1; }
+
+  /* Sections */
+  section { padding: 112px 0; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--champagne); font-weight: 500; margin-bottom: 22px; }
+  h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 4vw, 46px); line-height: 1.15; margin-bottom: 28px; }
+  p + p { margin-top: 18px; }
+  .big { font-family: var(--serif); font-size: clamp(22px, 2.4vw, 27px); line-height: 1.5; font-weight: 400; }
+
+  .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 48px; }
+  .step { background: var(--ivory); padding: 44px 40px; }
+  .step .lead-in { font-style: italic; color: var(--champagne); }
+  .form-card { background: #fff; border: 1px solid var(--line); padding: 28px 28px 8px; margin: 36px auto 0; text-align: left; max-width: 640px; }
+  .step h3 { font-family: var(--serif); font-weight: 500; font-size: 28px; margin: 0 0 16px; }
+  .step p { color: var(--muted); }
+  .note { margin-top: 44px; font-family: var(--serif); font-style: italic; font-size: 24px; line-height: 1.45; }
+
+  .alt { background: var(--ivory-deep); }
+
+  .founder { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: center; }
+  .founder img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
+  .founder .sig { margin-top: 26px; font-family: var(--serif); font-size: 20px; }
+  .founder .sig span { display: block; font-family: var(--sans); font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+
+  .pulse { background: var(--black); color: var(--on-dark); }
+  .pulse .wrap { display: flex; justify-content: space-between; align-items: center; gap: 48px; }
+  .pulse h2 { margin-bottom: 14px; }
+  .pulse p { color: var(--on-dark-muted); max-width: 560px; }
+  .pulse .btn { white-space: nowrap; }
+
+  .next { padding-bottom: 40px; }
+  .steps-list { list-style: none; counter-reset: s; margin-top: 8px; }
+  .steps-list li { counter-increment: s; position: relative; padding: 22px 0 22px 56px; border-top: 1px solid var(--line); }
+  .steps-list li:last-child { border-bottom: 1px solid var(--line); }
+  .steps-list li::before { content: counter(s); position: absolute; left: 0; top: 16px; font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--champagne); }
+  .steps-list strong { font-weight: 500; }
+  .price { margin-top: 28px; font-family: var(--serif); font-size: 22px; }
+  .cta { text-align: center; }
+  .cta .narrow { margin: 0 auto; }
+  .cta p { color: var(--muted); }
+  .cta .actions { justify-content: center; }
+  .cta .email { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+  footer { border-top: 1px solid var(--line); padding: 36px 0; font-size: 13px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; }
+  footer a { text-decoration: none; margin-left: 22px; }
+  footer a:first-child { margin-left: 0; }
+  footer a:hover { color: var(--ink); }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    nav { display: none; }
+    header .wrap { padding-top: 22px; }
+    .wordmark { font-size: 18px; }
+    .hero { min-height: 88vh; background-position: 72% center; }
+    .hero::after { background: linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.85) 60%); }
+    .hero .wrap { padding-top: 110px; padding-bottom: 64px; }
+    section { padding: 76px 0; }
+    .steps { grid-template-columns: 1fr; }
+    .step { padding: 32px 26px; }
+    .founder { grid-template-columns: 1fr; gap: 32px; }
+    .founder img { max-width: 260px; }
+    .pulse .wrap { flex-direction: column; align-items: flex-start; }
+    .btn { width: 100%; text-align: center; }
+    footer a { margin-left: 0; margin-right: 20px; }
+  }
+  .topbar { background: var(--black); }
+  .topbar header { position: static; }
+  .topbar header .wrap { padding-top: 24px; padding-bottom: 24px; }
+  .request { padding-top: 72px; }
+  .request .back { font-size: 14px; color: var(--muted); text-decoration: none; }
+  .request .back:hover { color: var(--ink); }
+  .request h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.4vw, 48px); line-height: 1.15; margin: 18px 0 14px; }
+  .request .intro { color: var(--muted); max-width: 600px; }
+  .request .form-card { margin: 32px 0 0; }
+  .request .email { margin-top: 18px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="topbar">
+<header>
+  <div class="wrap">
+    <a class="wordmark" href="/" aria-label="Calidyn home">CALIDYN</a>
+    <nav>
+      <a href="/#approach">Approach</a>
+      <a href="/#founder">Founder</a>
+      <a href="https://thecorporatepulse.substack.com">The Corporate Pulse</a>
+    </nav>
+  </div>
+</header>
+</div>
+<main>
+  <section class="request">
+    <div class="wrap narrow">
+      <a class="back" href="/">&larr; Back to calidyn.co</a>
+      <h1>Request a Communication Diagnostic</h1>
+      <p class="intro">Five short questions. I&rsquo;ll reply within two working days to check it&rsquo;s a good fit and share next steps. The Communication Diagnostic is USD 350.</p>
+      <div class="form-card">
+        <iframe data-tally-src="https://tally.so/embed/o9eNDO?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="620" frameborder="0" marginheight="0" marginwidth="0" title="Request a Communication Diagnostic"></iframe>
+      </div>
+      <div class="email">Prefer email? <a href="mailto:allegra@calidyn.co">allegra@calidyn.co</a></div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div>© 2026 Calidyn</div>
+    <div>
+      <a href="https://www.linkedin.com/company/calidyn">LinkedIn</a>
+      <a href="https://www.instagram.com/calidyn/">Instagram</a>
+      <a href="https://thecorporatepulse.substack.com">The Corporate Pulse</a>
+    </div>
+  </div>
+</footer>
+<script src="https://tally.so/widgets/embed.js" async></script>
+<script>window.addEventListener("load",function(){if(window.Tally){Tally.loadEmbeds()}else{document.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})}});</script>
+</body>
+</html>
