@@ -140,6 +140,16 @@
   .request .intro { color: var(--muted); max-width: 600px; }
   .request .form-card { margin: 32px 0 0; }
   .request .email { margin-top: 18px; font-size: 14px; color: var(--muted); }
+  .cform { padding: 36px 36px 28px; }
+  .cform .lead { color: var(--ink); margin-bottom: 26px; }
+  .cform label { display: block; font-weight: 500; font-size: 15px; color: var(--ink); margin-bottom: 22px; line-height: 1.45; }
+  .cform input[type=text], .cform input[type=email], .cform textarea { display: block; width: 100%; margin-top: 9px; padding: 13px 14px; font: 300 16px/1.5 var(--sans); color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 0; transition: border-color .2s; }
+  .cform input:focus, .cform textarea:focus { outline: none; border-color: var(--plum-accent); }
+  .cform textarea { resize: vertical; min-height: 130px; }
+  .cform textarea::placeholder { color: #a39a90; }
+  .cform button { border: 0; cursor: pointer; font-family: var(--sans); margin-top: 6px; }
+  .cform .privacy-note { margin-top: 18px; font-size: 13px; color: var(--muted); }
+  .cform .privacy-note a { color: var(--plum-accent); }
 </style>
 </head>
 <body>
@@ -161,9 +171,21 @@
       <a class="back" href="/">&larr; Back to calidyn.co</a>
       <h1>Request a Communication Diagnostic</h1>
       <p class="intro">Five short questions. I&rsquo;ll reply within two working days to check it&rsquo;s a good fit and share next steps.</p>
-      <div class="form-card">
-        <iframe data-tally-src="https://tally.so/embed/o9eNDO?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="620" frameborder="0" marginheight="0" marginwidth="0" title="Request a Communication Diagnostic"></iframe>
-      </div>
+      <form class="form-card cform" action="https://formsubmit.co/allegra@calidyn.co" method="POST">
+        <input type="hidden" name="_subject" value="New Communication Diagnostic request">
+        <input type="hidden" name="_next" value="https://calidyn.co/request/thanks/">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <p class="lead">Tell me a little about you and your work. I read every request myself and reply personally.</p>
+        <label>Name<input type="text" name="Name" required autocomplete="name"></label>
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        <label>Role and company<input type="text" name="Role and company" required autocomplete="organization-title"></label>
+        <label>Where are you based, and what language do you mostly work in?<input type="text" name="Location and working language" required></label>
+        <label>Tell me about a recent moment at work when you knew what you wanted to say, but it didn&rsquo;t come across the way you meant.<textarea name="A recent moment" rows="5" required placeholder="For example: pushback in a meeting, an email to someone senior, or a presentation in your second language. A few lines is plenty."></textarea></label>
+        <button class="btn btn-dark" type="submit">Send request</button>
+        <p class="privacy-note">By sending this, you agree to me using these details to reply to your request. <a href="/privacy/">How I handle your information</a>.</p>
+      </form>
       <div class="email">Prefer email? <a href="mailto:allegra@calidyn.co">allegra@calidyn.co</a></div>
     </div>
   </section>
@@ -175,10 +197,9 @@
       <a href="https://www.linkedin.com/company/calidyn">LinkedIn</a>
       <a href="https://www.instagram.com/calidyn/">Instagram</a>
       <a href="https://thecorporatepulse.substack.com">The Corporate Pulse</a>
+      <a href="/privacy/">Privacy</a>
     </div>
   </div>
 </footer>
-<script src="https://tally.so/widgets/embed.js" async></script>
-<script>window.addEventListener("load",function(){if(window.Tally){Tally.loadEmbeds()}else{document.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})}});</script>
 </body>
 </html>
