@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank you | Calidyn</title>
+<meta name="description" content="Executive communication development for international professionals, built around your real work.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calidyn.co/">
+<meta property="og:title" content="Calidyn | Executive Communication Development">
+<meta property="og:description" content="Communication should never be the reason someone’s capability goes unseen.">
+<meta property="og:image" content="https://calidyn.co/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/favicon-plum.png">
+<link rel="apple-touch-icon" href="/favicon-plum.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --ivory: #f4efe6;
+    --ivory-deep: #ebe4d8;
+    --ink: #1a1816;
+    --muted: #6b645b;
+    --line: #d8cfc0;
+    --champagne: #d8c3a5;
+    --champagne-deep: #9c7d58;
+    --plum: #2a0f1e;
+    --plum-2: #3a1528;
+    --plum-accent: #6a2c4a;
+    --on-dark: #efe9de;
+    --on-dark-muted: #b9b0a2;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--ivory); color: var(--ink); font-family: var(--sans); font-weight: 300; font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .narrow > * { max-width: 720px; }
+  .cta .narrow > * { margin-left: auto; margin-right: auto; }
+
+  /* Header */
+  header { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; }
+  .wordmark { font-family: var(--serif); font-size: 22px; letter-spacing: 0.42em; color: var(--champagne); text-decoration: none; font-weight: 500; }
+  nav a { color: var(--on-dark-muted); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; margin-left: 28px; transition: color .2s; }
+  nav a:hover { color: var(--on-dark); }
+
+  /* Hero */
+  .hero { background: var(--plum) url("/hero.jpg") right center / cover no-repeat; color: var(--on-dark); min-height: 92vh; display: flex; align-items: center; position: relative; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(26,9,18,.9) 0%, rgba(26,9,18,.55) 45%, rgba(26,9,18,0) 75%); }
+  .hero .wrap { position: relative; z-index: 1; padding-top: 120px; padding-bottom: 96px; width: 100%; }
+  .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(38px, 5.4vw, 64px); line-height: 1.12; max-width: 640px; letter-spacing: -0.005em; }
+  .rule { width: 72px; height: 1px; background: var(--champagne); margin: 32px 0 26px; }
+  .hero p.lede { color: var(--on-dark-muted); font-size: 18px; max-width: 520px; }
+  .actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; }
+  .btn { display: inline-block; padding: 16px 28px; font-size: 14px; letter-spacing: 0.06em; text-decoration: none; font-weight: 400; transition: background .2s, color .2s; }
+  .btn-light { background: var(--champagne); color: var(--plum); }
+  .btn-light:hover { background: #e8d9c3; }
+  .btn-dark { background: var(--plum); color: var(--on-dark); }
+  .btn-dark:hover { background: var(--plum-2); }
+  .link-quiet { font-size: 14px; letter-spacing: 0.04em; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; opacity: .85; }
+  .link-quiet:hover { opacity: 1; }
+
+  /* Sections */
+  section { padding: 112px 0; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--champagne); font-weight: 500; margin-bottom: 22px; }
+  h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 4vw, 46px); line-height: 1.15; margin-bottom: 28px; }
+  p + p { margin-top: 18px; }
+  .big { font-family: var(--serif); font-size: clamp(22px, 2.4vw, 27px); line-height: 1.5; font-weight: 400; }
+
+  .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 48px; }
+  .step { background: var(--ivory); padding: 44px 40px; border-top: 2px solid var(--plum-accent); }
+  .step .lead-in { font-style: italic; color: var(--plum-accent); }
+  .form-card { background: #fff; border: 1px solid var(--line); padding: 28px 28px 8px; margin: 36px auto 0; text-align: left; max-width: 640px; }
+  .step h3 { font-family: var(--serif); font-weight: 500; font-size: 28px; margin: 0 0 16px; }
+  .step p { color: var(--muted); }
+  .note { margin-top: 44px; font-family: var(--serif); font-style: italic; font-size: 24px; line-height: 1.45; color: var(--plum-accent); }
+
+  .alt { background: var(--ivory-deep); }
+
+  .founder { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: center; }
+  .founder img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
+  .founder .sig { margin-top: 26px; font-family: var(--serif); font-size: 20px; }
+  .founder .sig span { display: block; font-family: var(--sans); font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+
+  .pulse { background: var(--black); color: var(--on-dark); }
+  .pulse .wrap { display: flex; justify-content: space-between; align-items: center; gap: 48px; }
+  .pulse h2 { margin-bottom: 14px; }
+  .pulse p { color: var(--on-dark-muted); max-width: 560px; }
+  .pulse .btn { white-space: nowrap; }
+
+  .next { padding-bottom: 40px; }
+  .steps-list { list-style: none; counter-reset: s; margin-top: 8px; }
+  .steps-list li { counter-increment: s; position: relative; padding: 22px 0 22px 56px; border-top: 1px solid var(--line); }
+  .steps-list li:last-child { border-bottom: 1px solid var(--line); }
+  .steps-list li::before { content: counter(s); position: absolute; left: 0; top: 16px; font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--plum-accent); }
+  .steps-list strong { font-weight: 500; }
+  .price { margin-top: 28px; font-family: var(--serif); font-size: 22px; }
+  .cta { text-align: center; }
+  .cta .narrow { margin: 0 auto; }
+  .cta p { color: var(--muted); }
+  .cta .actions { justify-content: center; }
+  .cta .email { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+  footer { background: var(--plum); padding: 36px 0; font-size: 13px; color: #b9a9a0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; }
+  footer a { text-decoration: none; margin-left: 22px; }
+  footer a:first-child { margin-left: 0; }
+  footer a:hover { color: var(--champagne); }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    nav { display: none; }
+    header .wrap { padding-top: 22px; }
+    .wordmark { font-size: 18px; }
+    .hero { min-height: 88vh; background-position: 72% center; }
+    .hero::after { background: linear-gradient(180deg, rgba(26,9,18,.5) 0%, rgba(26,9,18,.85) 60%); }
+    .hero .wrap { padding-top: 110px; padding-bottom: 64px; }
+    section { padding: 76px 0; }
+    .steps { grid-template-columns: 1fr; }
+    .step { padding: 32px 26px; }
+    .founder { grid-template-columns: 1fr; gap: 32px; }
+    .founder img { max-width: 260px; }
+    .pulse .wrap { flex-direction: column; align-items: flex-start; }
+    .btn { width: 100%; text-align: center; }
+    footer a { margin-left: 0; margin-right: 20px; }
+  }
+  .topbar { background: var(--plum); }
+  .topbar header { position: static; }
+  .topbar header .wrap { padding-top: 24px; padding-bottom: 24px; }
+  .request { padding-top: 72px; }
+  .request .back { font-size: 14px; color: var(--muted); text-decoration: none; }
+  .request .back:hover { color: var(--plum); }
+  .request h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.4vw, 48px); line-height: 1.15; margin: 18px 0 14px; }
+  .request .intro { color: var(--muted); max-width: 600px; }
+  .request .form-card { margin: 32px 0 0; }
+  .request .email { margin-top: 18px; font-size: 14px; color: var(--muted); }
+  .cform { padding: 36px 36px 28px; }
+  .cform .lead { color: var(--ink); margin-bottom: 26px; }
+  .cform label { display: block; font-weight: 500; font-size: 15px; color: var(--ink); margin-bottom: 22px; line-height: 1.45; }
+  .cform input[type=text], .cform input[type=email], .cform textarea { display: block; width: 100%; margin-top: 9px; padding: 13px 14px; font: 300 16px/1.5 var(--sans); color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 0; transition: border-color .2s; }
+  .cform input:focus, .cform textarea:focus { outline: none; border-color: var(--plum-accent); }
+  .cform textarea { resize: vertical; min-height: 130px; }
+  .cform textarea::placeholder { color: #a39a90; }
+  .cform button { border: 0; cursor: pointer; font-family: var(--sans); margin-top: 6px; }
+  .cform .privacy-note { margin-top: 18px; font-size: 13px; color: var(--muted); }
+  .cform .privacy-note a { color: var(--plum-accent); }
+</style>
+</head>
+<body>
+<div class="topbar">
+<header>
+  <div class="wrap">
+    <a class="wordmark" href="/" aria-label="Calidyn home">CALIDYN</a>
+    <nav>
+      <a href="/#approach">Approach</a>
+      <a href="/#founder">Founder</a>
+      <a href="https://thecorporatepulse.substack.com">The Corporate Pulse</a>
+    </nav>
+  </div>
+</header>
+</div>
+<main>
+  <section class="request">
+    <div class="wrap narrow">
+      <h1>Thank you, your request is in.</h1>
+      <p class="intro">I&rsquo;ll read it myself and reply personally within two working days, with next steps for your Communication Diagnostic.</p>
+      <p style="margin-top:28px"><a class="btn btn-dark" href="https://thecorporatepulse.substack.com">Read The Corporate Pulse while you wait</a></p>
+      <p style="margin-top:22px"><a class="back" href="/">&larr; Back to calidyn.co</a></p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div>© 2026 Calidyn</div>
+    <div>
+      <a href="https://www.linkedin.com/company/calidyn">LinkedIn</a>
+      <a href="https://www.instagram.com/calidyn/">Instagram</a>
+      <a href="https://thecorporatepulse.substack.com">The Corporate Pulse</a>
+      <a href="/privacy/">Privacy</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
